@@ -1,10 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const textInput = document.getElementById('text-input');
-    const textOutput = document.getElementById('text-output');
-    const myButton = document.getElementById('my-button');
+    function showRoute(route) {
+        const routes = ['login', 'purchase', 'profile', 'chat'];
+        routes.forEach(r => {
+            const element = document.getElementById(r);
+            if (element) {
+                element.style.display = (r === route) ? 'block' : 'none';
+            }
+        });
+    }
 
-    myButton.addEventListener('click', function() {
-        const text = textInput.value;
-        textOutput.textContent = text;
-    });
+    function handleHashChange() {
+        const route = window.location.hash.substring(1);
+        showRoute(route);
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Initial route
+    handleHashChange();
 });

@@ -1,32 +1,30 @@
 body {
     font-family: sans-serif;
 }
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid black;
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
-#text-input {
-    width: 90%;
-    height: 150px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 16px;
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
     padding: 10px;
-    font-family: monospace;
 }
-#text-output {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Courier New';
-    color: darkblue;
+
+a:hover {
+    background-color: #f0f0f0;
 }
-#my-button {
-    color: white;
-    background-color: lightblue;
-    border: 2px solid black;
-    border-radius: 10px;
+
+h2 {
+    margin-top: 0;
 }
 
