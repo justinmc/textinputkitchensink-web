@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     function showRoute(route) {
-        const routes = ['login', 'purchase', 'profile', 'chat'];
+        const routes = ['home', 'login', 'purchase', 'profile', 'chat'];
         routes.forEach(r => {
             const element = document.getElementById(r);
             if (element) {
@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleHashChange() {
-        const route = window.location.hash.substring(1);
+        let route = window.location.hash.substring(1);
+        if (route == '') {
+          route = 'home';
+        }
         showRoute(route);
     }
 
