@@ -57,22 +57,76 @@
 
     <div id="login" style="display: none;">
         <h2>Login</h2>
-        <p>Placeholder for login form.</p>
+        <form id="loginForm">
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="current-password" autocomplete="current-password" required minlength="5">
+            </div>
+            <button type="submit">Login</button>
+        </form>
     </div>
 
     <div id="purchase" style="display: none;">
         <h2>Purchase</h2>
-        <p>Placeholder for purchase form.</p>
+        <form id="purchaseForm">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" autocomplete="address-line1" required>
+            </div>
+            <div>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" autocomplete="address-level2" required>
+            </div>
+            <div>
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" name="zip" autocomplete="postal-code" required>
+            </div>
+            <div>
+                <label for="creditCard">Credit Card Number:</label>
+                <input type="text" id="creditCard" name="creditCard" autocomplete="cc-number" required>
+            </div>
+            <div>
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" name="expiry" autocomplete="cc-exp" required>
+            </div>
+            <div>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" autocomplete="cc-csc" required>
+            </div>
+            <button type="submit">Purchase</button>
+        </form>
     </div>
 
     <div id="profile" style="display: none;">
         <h2>Profile Creation</h2>
-        <p>Placeholder for profile creation form.</p>
+        <form id="profileForm">
+            <div>
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" minlength="50" required></textarea>
+                <p id="bioCount">0/50 characters</p>
+            </div>
+            <button type="submit">Create Profile</button>
+        </form>
     </div>
 
     <div id="chat" style="display: none;">
         <h2>Chat</h2>
-        <p>Placeholder for chat interface.</p>
+        <div id="messages">
+            <div class="message received">Hello!</div>
+            <div class="message sent">Hi there!</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
