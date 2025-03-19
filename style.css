@@ -35,6 +35,11 @@ form {
     width: 300px;
 }
 
+form#message-form {
+  flex-direction: row;
+  width: auto;
+}
+
 form div {
     margin-bottom: 10px;
 }
@@ -60,7 +65,7 @@ textarea {
     height: 100px;
 }
 
-button {
+button, input[type="submit"] {
     padding: 10px 15px;
     background-color: #007bff;
     color: white;
@@ -69,7 +74,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
     background-color: #0056b3;
 }
 

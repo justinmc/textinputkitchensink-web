@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Input Kitchen Sink</title>
     <link rel="stylesheet" href="styles.css">
+    <base href="/textinputkitchsink-web/">
 </head>
 <body>
 <!DOCTYPE html>
@@ -124,8 +125,10 @@
             <div class="message sent">Hi there!</div>
         </div>
         <div class="input-area">
-            <input type="text" id="messageInput" placeholder="Type your message...">
-            <button id="sendButton">Send</button>
+            <form id="message-form">
+                <input type="text" id="messageInput" placeholder="Type your message..." />
+                <input type="submit" id="sendButton" />
+            </form>
         </div>
     </div>
 

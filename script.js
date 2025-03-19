@@ -90,24 +90,24 @@ document.addEventListener('DOMContentLoaded', function() {
             // Redirect to home
             window.location.hash = 'home';
         });
-+    }
-+
-+    // Chat page message sending
-+    const sendButton = document.getElementById('sendButton');
-+    const messageInput = document.getElementById('messageInput');
-+    const messagesContainer = document.getElementById('messages');
-+
-+    if (sendButton && messageInput && messagesContainer) {
-+        sendButton.addEventListener('click', function() {
-+            const message = messageInput.value;
-+            if (message.trim() !== '') {
-+                const messageElement = document.createElement('div');
-+                messageElement.classList.add('message', 'sent');
-+                messageElement.textContent = message;
-+                messagesContainer.appendChild(messageElement);
-+                messageInput.value = '';
-+                messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to bottom
-+            }
-+        });
-+    }
+    }
+
+    // Chat page message sending
+    const sendButton = document.getElementById('sendButton');
+    const messageInput = document.getElementById('messageInput');
+    const messagesContainer = document.getElementById('messages');
+
+    if (sendButton && messageInput && messagesContainer) {
+        sendButton.addEventListener('click', function() {
+            const message = messageInput.value;
+            if (message.trim() !== '') {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message', 'sent');
+                messageElement.textContent = message;
+                messagesContainer.appendChild(messageElement);
+                messageInput.value = '';
+                messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to bottom
+            }
+        });
+    }
 });
